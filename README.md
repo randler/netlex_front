@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# netLex frontend test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    - O objetivo desse teste é verificar o conhecimento do(a) candidato(a) em frontend web, nesse teste, o candidato pode escolher construir o frontend através de qualquer framework, (React, Angular, Vue) ou até mesmo, se quiser, pode construir com javascript vanilla.
 
-## Available Scripts
+    - Esse frontend consumirá a API construída nesse mesmo teste, no backend, sugerimos que o candidato faça o backend primeiro e depois o front, mas isso fica a seu critério.
 
-In the project directory, you can run:
+    - Segue o link do protótipo:
+            https://www.figma.com/proto/RVMNL080DHMJMER1bPvUPC/Teste-frontend-dev?page-id=110%3A112&node-id=110%3A2501&viewport=241%2C48%2C0.36&scaling=min-zoom&starting-point-node-id=110%3A113
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - Temos uma pasta assets que contém todas as imagens e ícones necessários para construir as telas.
+# Critérios de aceite por tela:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    - Tela de Login
 
-### `npm test`
+        - Input para email do usuário, deve-se ter validação do email no input do usuário
+        - Input para senha do usuário, deve ser input do type password.
+        - Botão entrar com ação de login (Ideal que seja feito como formulário e submit), esse botão deve consumir o método de login, disponibilizado no backend na rota http://localhost:3086/users/login,
+        caso o backend retorne um erro, esse deve ser exibido no front nesse componente de toast, que irá aparecer no canto inferior esquerdo da tela, sugerimos que seja criado um componente separado para mostrar o toast.
+        - Caso o login seja feito com sucesso, deve-se armazenar o token que retorna da chamada e inserí-lo no header abaixo:
+            Authorization: Bearer ${token}
+        
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - Telas dos métodos do Documento
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+        - Nessas telas, deve-se consumir os 3 métodos criados na API, e exibir seus respectivos resultados de acordo com o input do usuário.
